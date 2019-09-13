@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+    .navbar {
+        background-color: purple;
+        overflow: hidden;
+    }
+    .navbar a {
+        Color: black;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 16px;
+        float: left;
+    }
+    
+    .morelinks{
+        Color: black;
+        font-size: 24px;
+        text-decoration: none;
+        padding: 16px;
+    }
+    
+    .navbar a:hover, .morelinks:hover{
+        background-color:yellow;
+    }
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+    .dropdown-content{
+       position: absolute;
+       z-index: 1;
+       display:none;
+       background-color: purple;
+    }
+    
+     .dropdown{
+         background-color: blue;
+         color: white;
+         text-decoration: none;
+         font-size: 24px;
+         float: left;
+     }
+     
+     .dropdown-content a{
+         float: none;
+         display:block;
+     }
+    
+    </style>
 <title>Yes</title>
 </head>
 <body>
+<h1>Wario strikes again</h1>
+<p>my first waahh</p>
+    <div class="navbar">
+      <a href="https://www.yahoo.com/">Yahoo</a>
+      <a href="https://www.google.com/">google</a>
+      <a href="https://www.yahoo.com/">Yahoo</a>
+      <div class="dropdown">
+        <div class="morelinks">More Links</div>
+        <div class="dropdown-content">
+          <a href="https://www.awseducate.com">AWS Educate</a>
+          <a href="https://www.collegeboard.org">College Board</a>
+        </div>
+      </div>  
+</div>
 
-<h1>My First waah</h1>
-<p>My first Luigi.</p>
+
 
 </body>
 </html>
