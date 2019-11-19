@@ -90,7 +90,7 @@
          <div id='rightpane'>
          </div>
          <div id="storytext">
-            <p id="ptext1">hellosh</p>
+            <p id="ptext1">*insert Super Smash Bros. Music here</p>
             <p id="ptext2"></p>
             <p id="ptext3"></p>
             <p id="ptext4"></p>
@@ -117,7 +117,7 @@
     intro();
     function intro(){
         pic.src = "images/forntite2.jpg";
-        ptext1.innerHTML = "This is the intro to my story";
+        ptext1.innerHTML = "Is you a gamer?";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
@@ -127,34 +127,118 @@
         b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
-        state = "meetWaluigi";
+        
     }
 
-    function meetWaluigi(){
-        pic.src = "images/Waluigi.jpg";
-        ptext1.innerHTML = "It's wal..LUIIIGI TIME";
-        ptext2.innerHTML = "";
+    function meetJosephi(){
+        pic.src = "images/josephikrickowski.jpg";
+        ptext1.innerHTML = "There once was a young lad by the name of Josephi Kirckowski who lived in an old farm inherited by his grandparents just south of Salty Springs. He came from a poor family, one mother, one father, and two little brothers; Vladmir and Count Chocula.  They lived off of the agriculture they grew on the farm. However, on the day of August 3, 1492, winter lasted far longer than the past years. Thus, the crops were too late for harvest resulting in no food for the family";
+        ptext2.innerHTML = "Josephi, being an adventurous foe, sets out into greater lands to find help and food to provide for his family.  Josephi’s main goal was to bring assured survival for his family as well as emote on all of the enemies that stood in his way of fulfilling this quest.  Where do you go?";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
-        b1.innerHTML = "say Waah";
-        b2.innerHTML = "Build battle";
+        b1.innerHTML = "go west";
+        b2.innerHTML = " go east";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "none";
         b4.style.display = "none";
-        state = "meetWaluigi";
+        
     }
+    function gowest(){
+        pic.src = "images/noobslayer.jpg";
+        ptext1.innerHTML = "As you set on your journey you stumble upon Noobslayer445.  Fortunately for the combined efforts of cliches and lazy writing, he doesn't see you.";
+        ptext2.innerHTML = "What do you do?";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "buildbattle";
+        b2.innerHTML = "Wait until he leafs";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+       
+    }
+    function buildbattle1(){
+        pic.src = "images/gitgoodb.png";
+        ptext1.innerHTML = "you don't have materials yet..............git good";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "return";
+        b2.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+     function leaf(){
+        pic.src = "images/party.jpg";
+        ptext1.innerHTML = "you wait for him to get picked up by his fellow partiers because let's face it, with what he was wearing in the previous image, he was either going to a rave or the most elaborate dark light golf course.";
+        ptext2.innerHTML = "you continue on your journey and find a loot llama containing a gold scar.";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "My peter tingle is activating";
+        b2.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+     }
+     function Saywaah(){
+        pic.src = "images/waluigi.jpg";
+        ptext1.innerHTML = "He becomes your (waah)lly.";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "emote again";
+        b2.innerHTML = "leave";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+        
+    }
+
     function bclick(button){
         if(state=="intro"){
            if(button== 1){
-               meetWitch();
+               meetJosephi();
+               state = "meetJosephi";
            }
            else if(button==2){
               //send them somewhere else
+              intro();
+              state = "intro";
            }
     
         }
-        
+        else if(state == "meetJosephi"){
+            if (button == 1){
+                //go weast
+                gowest()
+                state="gowest";
+                
+            }
+            else if(buton ==2){
+                //go east
+            }
+        }
+        else if(state =="gowest"){
+            if (button ==1){
+                buildbattle1()
+                state="buildbattle1";
+            }
+            else if (button == 2){
+                leaf()
+                state="leaf"
+            }
+        }
+        else if(state == "buildbattle1"){
+            if (button ==1){
+                intro()
+                state ="intro";
+            }
+        }
     }
     </script>
   </body>
