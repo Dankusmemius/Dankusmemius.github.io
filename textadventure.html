@@ -117,8 +117,8 @@
     intro();
     function intro(){
         pic.src = "images/forntite2.jpg";
-        ptext1.innerHTML = "Is you a gamer?";
-        ptext2.innerHTML = "";
+        ptext1.innerHTML = "*insert Super Smash Bros theme here:";
+        ptext2.innerHTML = "Is you a gamer?";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
         b1.innerHTML = "yes";
@@ -184,16 +184,29 @@
         b3.style.display = "none";
         b4.style.display = "none";
      }
-     function Saywaah(){
+     function meetwaluigi(){
         pic.src = "images/waluigi.jpg";
+        ptext1.innerHTML = "You move just in time before a baseball smashes through the icy floor of wear you stood. You look up and see the one and only Great Waluigi!";
+        ptext2.innerHTML = "What do you do?";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Build for high ground";
+        b2.innerHTML = "say waah";
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "none";
+        b4.style.display = "none";
+     }   
+     function Saywaah(){
+        pic.src = "images/wahlly.png";
         ptext1.innerHTML = "He becomes your (waah)lly.";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
-        b1.innerHTML = "emote again";
-        b2.innerHTML = "leave";
+        b1.innerHTML = "It's waluigi time!";
+        b2.innerHTML = "";
         b1.style.display = "block";
-        b2.style.display = "block";
+        b2.style.display = "none";
         b3.style.display = "none";
         b4.style.display = "none";
         
@@ -237,6 +250,22 @@
             if (button ==1){
                 intro()
                 state ="intro";
+            }
+        }
+        else if(state=="leaf"){
+            if (button ==1){
+                meetwaluigi()
+                state ="meetwaluigi";
+            }
+        }
+        else if(state== "meetwaluigi"){
+            if (button ==1){
+                bfhg()
+                state ="bfhg";
+            }
+            else if (button ==2){
+                Saywaah()
+                state = "Saywaah";
             }
         }
     }
